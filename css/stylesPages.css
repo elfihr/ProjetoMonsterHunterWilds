@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic&family=Poppins&display=swap');
+
+:root{
+    --cor-light-50:#ffffff;
+    --cor-light-100:#b9b9b9;
+    --cor-light-150:#7e7e7e;
+
+    --cor-yellow-100:#f5ff62;
+
+    --gradient-one:linear-gradient(#ffffaa, #fe9d01);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background:  url(../img/background-pages.PNG) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#check{
+    display: none;
+}
+
+.navMenu{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+     /*
+    border: 2px solid rgba(0, 0, 0, 0.2);*/
+}
+
+.navMenu::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);  
+    backdrop-filter: blur(50px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}
+
+/*-------------------Brilho na navbar*/
+.navMenu::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:-100%;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);  
+    transition: .5s;
+}
+
+.navMenu:hover::after{
+    left:100%;
+}
+/*--------------------Brilho na navbar*/
+
+
+.logo{
+    font-size: 2em;
+    width: 100px;
+    user-select: none;
+    color: var(--cor-light-50);
+    font-family: 'GFS Neohellenic', sans-serif;
+
+}
+
+
+
+.navbar a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.20em;
+    text-decoration: none;
+    color: var(--cor-light-50);
+    font-weight: 700;
+    margin-left: 2.5em;
+    font-size: 1.6em;
+    font-weight: 500;
+    border-bottom: none;
+    transition: 0.5s;
+    user-select: none;
+}
+
+.navbar a:hover{
+    color: var(--cor-yellow-100);
+}
+
+.navbar a:active{
+    transform: scale(0.9);
+}
+
+.iconMenu{
+    font-size:2.8rem;
+    color: var(--cor-light-50);
+    cursor: pointer;
+    display: none;
+    right: 0;
+}
+
+/*========================================BODY========================================*/
+
+main{
+    padding: 100px;
+}
+
+
+
+.gallery{
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.gallery h1{
+    font-family: 'GFS Neohellenic', sans-serif;
+    font-size: 3rem;
+    background: var(--gradient-one);
+    width: 300px;
+    color: var(--cor-light-50);
+    border: 1px solid var(--cor-light-50);
+    border-radius: 6px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    user-select: none;
+    
+}
+
+.gallery-image{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(500px,0.5fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    
+}
+
+.gallery-imag img{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--cor-light-50);
+}
+
+.gallery-image .wide{
+    grid-column:span 2;
+}
+
+.gallery-image .tall{
+    grid-row:span 2;
+}
+
+.gallery-image .big{
+    grid-row:span 2;
+    grid-column:span 2;
+}
+
+.gallery-image > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-image > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.gallery-image img{   
+    text-align: center;   
+    border: 2px solid var(--cor-light-50); 
+    cursor: pointer;
+    user-select: none;
+}
+
+.gallery-image img:hover{
+ 
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-image img:active{
+    position: absolute;
+    transform: 1.01;
+}
+
+/*========================================Responsive========================================*/
+
+@media (max-width: 992px){
+    .navMenu{
+        padding: 1.3em 5%;
+    }
+}
+
+@media (max-width: 928px){
+    .iconMenu{
+        display: inline-flex;
+    }
+
+    #check:checked~.iconMenu #menu-icon{
+        display: none;
+    }
+
+    #check:checked~.iconMenu #close-icon{
+        display: block;
+    }
+
+    #check:checked~.navbar{
+        height: 17rem;
+    }
+
+    #close-icon{
+        display: none;
+    }
+
+    .navbar{
+        position: absolute;
+        top:100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(50px);  
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+        overflow: hidden; /*esconde as opções do navbar ao "checkar"*/
+        transition: 0.3s ease;
+    }
+
+    .navbar a{
+        display: block;/*deixa navbar vertical*/
+        font-weight: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;      
+    }
+
+
+}
