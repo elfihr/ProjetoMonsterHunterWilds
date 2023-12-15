@@ -123,7 +123,6 @@ body{
 
 
 .footer{
-    position: absolute;
     padding: 16px, 100%;
     background-color: var(--cor-yellow-150);
     text-align: center;
