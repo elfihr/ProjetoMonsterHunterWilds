@@ -5,7 +5,14 @@
     --cor-light-100:#b9b9b9;
     --cor-light-150:#7e7e7e;
 
+
     --cor-yellow-100:#f5ff62;
+    --cor-yellow-150:#f5deb3;
+
+    --cor-dark-150:#271e1e;
+    --cor-dark-200:#000;
+
+    --gradient-one:linear-gradient(#ffffaa, #fe9d01);
 }
 
 *{
@@ -77,9 +84,11 @@ body{
     user-select: none;
     color: var(--cor-light-50);
     font-family: 'GFS Neohellenic', sans-serif;
-
 }
 
+.logo-show{
+    z-index: 1000;
+}
 
 
 .navbar a{
@@ -110,6 +119,20 @@ body{
     cursor: pointer;
     display: none;
     right: 0;
+}
+
+
+.footer{
+    position: absolute;
+    padding: 16px, 100%;
+    background-color: var(--cor-yellow-150);
+    text-align: center;
+    font-family: 'GFS Neohellenic', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
 @media (max-width: 992px){
@@ -169,6 +192,7 @@ body{
         opacity: 1;
         transition-delay: calc(.15s * var(--i));
     }
+
 
 
 }
