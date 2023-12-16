@@ -22,7 +22,7 @@
 }
 
 body{
-    min-height: 150vh;
+    min-height: 100vh;
     background:  url(../img/background-pages.PNG) no-repeat;
     background-size: cover;
     background-position: center;
@@ -325,14 +325,16 @@ input{
 
 .footer{
         padding: 16px, 100%;
-        background-color: var(--cor-yellow-150);
+        background: var(--cor-yellow-150);
         text-align: center;
         font-family: 'GFS Neohellenic', sans-serif;
         font-size: 1.5rem;
         font-weight: 400;
-        width: 100%;
-        bottom: 0;
-        left: 0;
+        position: static;
+        width: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 }
 
 /*========================================Responsive========================================*/
@@ -391,10 +393,11 @@ input{
     }
 
     body{
-        min-height: 200vh;
-        background:  url(../img/background-pages.PNG) no-repeat;
-        background-size: cover;
-        background-position: center;
+        min-height: 150vh;
+    }
+
+    .footer{
+        position:relative;
     }
 
     
