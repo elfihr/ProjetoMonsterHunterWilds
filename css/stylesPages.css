@@ -138,11 +138,7 @@ body{
     justify-content: center;
 }
 
-.gallery{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+
 
 .gallery h1{
     text-align: center;
@@ -331,13 +327,15 @@ input{
         font-size: 1.5rem;
         font-weight: 400;
         position: static;
-        width: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 }
 
 /*========================================Responsive========================================*/
+
+
 
 @media (max-width: 992px){
     .navMenu{
@@ -402,4 +400,10 @@ input{
 
     
 
+}
+
+@media (max-width: 600px){
+    .footer{
+        width:600px ;
+    }
 }
