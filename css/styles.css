@@ -23,7 +23,7 @@
 
 body{
     min-height: 100vh;
-    background:  url(../img/background-pages.PNG) no-repeat;
+    background:  url(../img/background-pages.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -37,7 +37,7 @@ body{
     top: 0;
     left:0;
     width: 100%;
-    padding: 1.3rem 10%;
+    padding: 1rem 10%;
     
     display: flex;
     justify-content: space-between;
@@ -97,7 +97,7 @@ body{
     text-decoration: none;
     color: var(--cor-light-50);
     font-weight: 700;
-    margin-left: 2.5em;
+    margin-left: 2em;
     font-size: 1.6em;
     font-weight: 500;
     border-bottom: none;
@@ -139,12 +139,12 @@ main{
     background-color: var(--cor-yellow-150);
     text-align: center;
     font-family: 'GFS Neohellenic', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    position: static;
+    position: fixed;
     width: 100%;
     bottom: 0;
-    left: 0;
+    left: 0 ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -233,11 +233,20 @@ main{
         transition-delay: calc(.15s * var(--i));
     }
 }
+@media (max-width: 859px){
+    .mainLogo{
+        top: 130px;
+        left: 5px;
+        width: 650px;
+        
+    }
+}
+
 @media (max-width: 780px){
     .mainLogo{
         top: 130px;
         left: 5px;
-        width: 700px;
+        width: 650px;
         
     }
 }
@@ -261,7 +270,6 @@ main{
 
 @media (max-width: 610px){
     .mainLogo{
-        top: 170px;
         width: 450px;
         
     }
@@ -270,7 +278,7 @@ main{
 @media (max-width: 550px){
     .mainLogo{
         left: -10px;
-        top: 200px;
+
         width: 420px;
         
     }
@@ -278,7 +286,6 @@ main{
 
 @media (max-width: 450px){
     .mainLogo{
-        top: 250px;
         width: 400px;
         
     }
@@ -286,7 +293,6 @@ main{
 
 @media (max-width: 400px){
     .mainLogo{
-        top: 250px;
         width: 370px;
         left: -15px;
         
@@ -295,7 +301,6 @@ main{
 
 @media (max-width: 400px){
     .mainLogo{
-        top: 250px;
         width: 350px;
         
     }

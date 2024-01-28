@@ -23,7 +23,7 @@
 
 body{
     min-height: 100vh;
-    background:  url(../img/background-pages.PNG) no-repeat;
+    background:  url(../img/background-pages.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -304,16 +304,16 @@ input{
 }
 
 .card[for="card01"] {
-    background-image: url(../img/cardmh01.PNG);
+    background-image: url(../img/cardmh01.webp);
 }
 .card[for="card02"] {
-    background-image: url(../img/cardmh02.PNG);
+    background-image: url(../img/cardmh02.webp);
 }
 .card[for="card03"] {
-    background-image: url(../img/cardmh03.PNG);
+    background-image: url(../img/cardmh03.webp);
 }
 .card[for="card04"] {
-    background-image: url(../img/cardmh04.PNG);
+    background-image: url(../img/cardmh04.webp);
 }
 
 
